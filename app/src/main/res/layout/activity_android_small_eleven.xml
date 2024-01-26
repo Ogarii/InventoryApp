@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearAndroidSmall"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle">
+        <ImageView android:id="@+id/imageArrowLeftOne"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_25pxh"
+            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_marginStart="@dimen/_4pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="@dimen/_25pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft1"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft1"/>
+        <View
+            android:background="@drawable/rectangle_bg_gray_900_5e_radius_10"
+            android:id="@+id/viewRectangleForty"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_160pxh"
+            android:layout_marginEnd="@dimen/_78pxh"
+            android:layout_marginStart="@dimen/_78pxh"
+            android:layout_marginTop="@dimen/_17pxv" android:layout_width="@dimen/_156pxh"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnEmployees"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_78pxh"
+            android:layout_marginStart="@dimen/_78pxh"
+            android:layout_marginTop="@dimen/_36pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_9pxv" android:singleLine="true"
+            android:text="@string/lbl_employees"
+            android:textAllCaps="false" style="@style/btnSolidRounded_6" tools:text="@string/lbl_employees"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnAddEmployees"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_78pxh"
+            android:layout_marginStart="@dimen/_78pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingEnd="@dimen/_17pxh"
+            android:paddingStart="@dimen/_21pxh"
+            android:paddingTop="@dimen/_9pxv" android:singleLine="true"
+            android:text="@string/lbl_add_employees"
+            android:textAllCaps="false" style="@style/btnSolidRounded_6" tools:text="@string/lbl_add_employees"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnSignOut"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_78pxh"
+            android:layout_marginStart="@dimen/_78pxh"
+            android:layout_marginTop="@dimen/_182pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/lbl_sign_out"
+            android:textAllCaps="false" style="@style/btnSolidRounded_5" tools:text="@string/lbl_sign_out"/>
+    </LinearLayout>
+</layout>

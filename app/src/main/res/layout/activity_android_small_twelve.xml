@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearAndroidSmall"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle">
+        <ImageView android:id="@+id/imageArrowLeftOne"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_25pxh"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_width="@dimen/_25pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft1"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft1"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearRowrectanglefortysix"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_399pxv"
+            android:layout_marginEnd="@dimen/_17pxh"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_85pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylebluegray_2">
+            <View
+                android:background="@drawable/rectangle_bg_gray_900_5e_radius_10"
+                android:id="@+id/viewRectangleFortySix"
+                android:layout_height="@dimen/_54pxh"
+                android:layout_marginBottom="@dimen/_15pxv"
+                android:layout_marginStart="@dimen/_24pxh"
+                android:layout_marginTop="@dimen/_15pxv" android:layout_width="@dimen/_57pxh"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtName"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_47pxv"
+                android:layout_marginEnd="@dimen/_118pxh"
+                android:layout_marginStart="@dimen/_30pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_weight="0.45" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@string/lbl_name2"
+                style="@style/txtInterregular17_3" tools:text="@string/lbl_name2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

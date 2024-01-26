@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearAndroidSmall"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle"
+        tools:context=".">
+        <ImageView android:id="@+id/imageSettingsSlider"
+            android:layout_gravity="end"
+            android:layout_height="@dimen/_25pxh"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_51pxv"
+            android:layout_width="@dimen/_25pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_settingsslider"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_settingsslider"/>
+
+        <LinearLayout
+            android:id="@+id/linearColumnanalyticsdashb"
+            android:layout_width="391dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginBottom="@dimen/_14pxv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAnalyticsDashb"
+                style="@style/txtInterregular20"
+                android:layout_width="319dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginEnd="@dimen/_32pxh"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="@string/msg_analytics_dashb"
+                tools:text="@string/msg_analytics_dashb" />
+
+            <ImageView
+                android:id="@+id/imageRectangleThree"
+                cornerRadius="@{@dimen/_30pxh}"
+                imageRes="@{@drawable/img_rectangle3}"
+                android:layout_width="@dimen/_279pxh"
+                android:layout_height="@dimen/_176pxh"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_marginEnd="@dimen/_5pxh"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_rectangle3" />
+
+            <View
+                android:id="@+id/viewRectangleFour"
+                android:layout_width="360dp"
+                android:layout_height="@dimen/_86pxv"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:background="@drawable/rectangle_bg_bluegray_100_radius_30" />
+
+            <TextView
+                android:id="@+id/txtSales"
+                style="@style/txtInterregular20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_28pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_marginEnd="@dimen/_28pxh"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/lbl_sales"
+                tools:text="@string/lbl_sales" />
+
+            <LinearLayout
+                android:id="@+id/linearRowhomeone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28pxh"
+                android:layout_marginTop="@dimen/_131pxv"
+                android:layout_marginEnd="@dimen/_28pxh"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

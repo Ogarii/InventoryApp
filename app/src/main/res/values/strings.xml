@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">mark_s_application11</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="lbl_code">Code</string>
+    <string name="lbl_date">Date</string>
+    <string name="lbl_quantity_5">Quantity    5</string>
+    <string name="lbl_employees">Employees</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_employee_1">Employee 1</string>
+    <string name="lbl_remove">Remove</string>
+    <string name="lbl_search">search</string>
+    <string name="lbl_category">category</string>
+    <string name="lbl_sign_out">sign out</string>
+    <string name="lbl_cash">Cash</string>
+    <string name="msg_analytics_dashb">Analytics Dashboard</string>
+    <string name="lbl_message">Message</string>
+    <string name="lbl_item_name">item name </string>
+    <string name="lbl_payment_method">Payment method</string>
+    <string name="lbl_x">x</string>
+    <string name="msg_buying_price">Buying price    300</string>
+    <string name="lbl_sales">sales</string>
+    <string name="lbl_description">Description</string>
+    <string name="msg_selling_price">Selling price    400</string>
+    <string name="lbl_qnt_2">qnt    2</string>
+    <string name="lbl_finish">Finish</string>
+    <string name="lbl_phone_number">Phone Number</string>
+    <string name="lbl_balance">Balance</string>
+    <string name="lbl_save2">Save</string>
+    <string name="lbl_price_500">price  500</string>
+    <string name="lbl_employee_login">Employee login</string>
+    <string name="lbl_mpesa">Mpesa</string>
+    <string name="lbl_add_employees">Add employees</string>
+    <string name="msg_email_bdrgvn_gm">Email
+bdrgvn@gmail.com</string>
+    <string name="lbl_selling_price">Selling Price</string>
+    <string name="lbl_buying_price">Buying Price</string>
+    <string name="lbl_paid">Paid</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_name">name</string>
+    <string name="lbl_omo_500g">omo 500g</string>
+    <string name="lbl_pone_number">pone number \u2028</string>
+    <string name="lbl_category2">Category</string>
+    <string name="lbl_name2">Name</string>
+    <string name="lbl_biometrics">Biometrics</string>
+    <string name="lbl">+</string>
+    <string name="lbl_remove_employee">Remove Employee</string>
+    <string name="lbl_items">items</string>
+    <string name="lbl_save">save</string>
+    <string name="msg_pone_number_07">pone number \u20280724r45364</string>
+    <string name="lbl_total_1000">total  1000</string>
+    <string name="title_activity_mainnav">MainnavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

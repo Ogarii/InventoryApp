@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+    <View
+        android:background="@drawable/rectangle_gradient_s_gray_900_e_bluegray_200"
+        android:id="@+id/viewAndroidSmall"
+        android:layout_height="match_parent" android:layout_width="match_parent"/>
+</layout>

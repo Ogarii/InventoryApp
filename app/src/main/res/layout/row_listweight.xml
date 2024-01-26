@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <FrameLayout android:id="@+id/frameStackweight"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <TextView android:ellipsize="end" android:gravity="top|start"
+            android:id="@+id/txtWeight" android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/lbl_omo_500g"
+            style="@style/txtInterregular15" tools:text="@string/lbl_omo_500g"/>
+        <FrameLayout android:id="@+id/frameStackweightOne"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_19pxv" android:layout_width="@dimen/_72pxh">
+            <TextView android:ellipsize="end"
+                android:gravity="top|start"
+                android:id="@+id/txtWeightOne"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_omo_500g"
+                style="@style/txtInterregular15" tools:text="@string/lbl_omo_500g"/>
+            <FrameLayout android:id="@+id/frameStackweightTwo"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_19pxv" android:layout_width="@dimen/_72pxh">
+                <TextView android:ellipsize="end"
+                    android:gravity="top|start"
+                    android:id="@+id/txtWeightTwo"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_omo_500g"
+                    style="@style/txtInterregular15" tools:text="@string/lbl_omo_500g"/>
+                <FrameLayout android:id="@+id/frameStackweightThree"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_19pxv" android:layout_width="@dimen/_72pxh">
+                    <TextView android:ellipsize="end"
+                        android:gravity="top|start"
+                        android:id="@+id/txtWeightThree"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_omo_500g"
+                        style="@style/txtInterregular15" tools:text="@string/lbl_omo_500g"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="top|start"
+                        android:id="@+id/txtWeightFour"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_omo_500g"
+                        style="@style/txtInterregular15" tools:text="@string/lbl_omo_500g"/>
+                </FrameLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

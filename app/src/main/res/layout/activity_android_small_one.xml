@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearAndroidSmall"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/txtEmployeelogin"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_77pxh"
+            android:layout_marginStart="@dimen/_77pxh"
+            android:layout_marginTop="@dimen/_209pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lbl_employee_login"
+            style="@style/txtInterregular20" tools:text="@string/lbl_employee_login"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_900_2b_radius_18"
+            android:ellipsize="end" android:hint="@string/lbl_name"
+            android:id="@+id/etGroupSixtyOne" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_77pxh"
+            android:layout_marginStart="@dimen/_77pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_3pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_25pxh"
+            android:paddingTop="@dimen/_7pxv" android:singleLine="true"
+            android:textColorHint="@color/gray_900_4c"
+            style="@style/etSolidRounded" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_900_2b_radius_18"
+            android:ellipsize="end" android:hint="@string/lbl_password"
+            android:id="@+id/etGroupSixty"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_77pxh"
+            android:layout_marginStart="@dimen/_77pxh"
+            android:layout_marginTop="@dimen/_27pxv"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_5pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_25pxh"
+            android:paddingTop="@dimen/_5pxv" android:singleLine="true"
+            android:textColorHint="@color/gray_900_4c"
+            style="@style/etSolidRounded" tools:ignore="Autofill"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtBiometrics"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_77pxh"
+            android:layout_marginStart="@dimen/_77pxh"
+            android:layout_marginTop="@dimen/_92pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lbl_biometrics"
+            style="@style/txtInterregular20_1" tools:text="@string/lbl_biometrics"/>
+        <ImageView
+            android:id="@+id/imageFingerprint"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_48pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_77pxh"
+            android:layout_marginStart="@dimen/_77pxh"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="@dimen/_48pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_fingerprint"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_fingerprint"/>
+    </LinearLayout>
+</layout>
