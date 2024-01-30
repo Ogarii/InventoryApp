@@ -155,41 +155,50 @@
                     android:layout_marginStart="@dimen/_71pxh" android:layout_width="@dimen/_147pxh"/>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout android:gravity="end"
+
+        <LinearLayout
             android:id="@+id/linearRowremove"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_33pxv"
-            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_width="369dp"
+            android:layout_height="48dp"
             android:layout_marginStart="@dimen/_16pxh"
             android:layout_marginTop="@dimen/_24pxv"
-            android:layout_width="match_parent" android:orientation="horizontal">
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginBottom="@dimen/_33pxv"
+            android:gravity="end"
+            android:orientation="horizontal">
+
             <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnRemove"
-                android:layout_height="@dimen/_42pxv"
+                style="@style/btnSolidRounded"
                 android:layout_width="@dimen/_118pxh"
-                android:paddingBottom="@dimen/_10pxv"
-                android:paddingEnd="@dimen/_29pxh"
+                android:layout_height="@dimen/_42pxv"
+                android:ellipsize="end"
+                android:gravity="center"
                 android:paddingStart="@dimen/_20pxh"
                 android:paddingTop="@dimen/_10pxv"
+                android:paddingEnd="@dimen/_29pxh"
+                android:paddingBottom="@dimen/_10pxv"
                 android:singleLine="true"
                 android:text="@string/lbl_remove"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_remove"/>
+                tools:text="@string/lbl_remove" />
+
             <androidx.appcompat.widget.AppCompatButton
-                android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnSave"
+                style="@style/btnSolidRounded"
+                android:layout_width="@dimen/_118pxh"
                 android:layout_height="@dimen/_42pxv"
                 android:layout_marginStart="@dimen/_72pxh"
-                android:layout_width="@dimen/_118pxh"
-                android:paddingBottom="@dimen/_10pxv"
-                android:paddingEnd="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:gravity="center"
                 android:paddingStart="@dimen/_30pxh"
                 android:paddingTop="@dimen/_10pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_10pxv"
                 android:singleLine="true"
                 android:text="@string/lbl_save"
                 android:textAllCaps="false"
-                style="@style/btnSolidRounded" tools:text="@string/lbl_save"/>
+                tools:text="@string/lbl_save" />
         </LinearLayout>
     </LinearLayout>
 </layout>

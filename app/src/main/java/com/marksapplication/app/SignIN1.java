@@ -12,7 +12,7 @@ public class SignIN1 extends AppCompatActivity {
 
      EditText email;
      EditText password;
-     TextView txtEmployeelogin;
+
 
      ImageView imageFingerprint;
 
@@ -24,7 +24,6 @@ public class SignIN1 extends AppCompatActivity {
 
         email = findViewById(R.id.etGroupSixtyOne);
         password = findViewById(R.id.etGroupSixty);
-        txtEmployeelogin = findViewById(R.id.txtEmployeelogin);
         imageFingerprint = findViewById(R.id.imageFingerprint);
 
         imageFingerprint.setOnClickListener(v -> {

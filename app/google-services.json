@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "343323466471",
+    "project_id": "inventorymarkagement2",
+    "storage_bucket": "inventorymarkagement2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343323466471:android:2b9a778557b21205a1a042",
+        "android_client_info": {
+          "package_name": "com.marksapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwFrUgcWx2SeJYSO6RbDRtMWxWzMJGE1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

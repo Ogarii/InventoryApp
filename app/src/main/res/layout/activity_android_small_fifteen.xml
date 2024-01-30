@@ -1,179 +1,319 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data/>
-    <LinearLayout android:id="@+id/linearAndroidSmall"
-        android:layout_height="match_parent"
+
+    <LinearLayout
+        android:id="@+id/linearAndroidSmall"
+        style="@style/groupStyle"
         android:layout_width="match_parent"
-        android:orientation="vertical" style="@style/groupStyle">
-        <ImageView android:id="@+id/imageArrowLeftOne"
-            android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageArrowLeftOne"
+            android:layout_width="@dimen/_25pxh"
             android:layout_height="@dimen/_25pxh"
-            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_gravity="start"
             android:layout_marginStart="@dimen/_4pxh"
             android:layout_marginTop="@dimen/_21pxv"
-            android:layout_width="@dimen/_25pxh"
+            android:layout_marginEnd="@dimen/_10pxh"
             android:scaleType="fitXY"
             android:src="@drawable/img_arrowleft1"
-            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft1"/>
-        <LinearLayout android:gravity="center_horizontal"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_arrowleft1" />
+
+        <LinearLayout
             android:id="@+id/linearColumnone"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_16pxh"
+            style="@style/groupStylegray_900_5ecornerRadius"
+            android:layout_width="371dp"
+            android:layout_height="214dp"
             android:layout_marginStart="@dimen/_16pxh"
             android:layout_marginTop="@dimen/_16pxv"
-            android:layout_width="wrap_content"
-            android:orientation="vertical" style="@style/groupStylegray_900_5ecornerRadius">
-            <TextView android:ellipsize="end"
-                android:gravity="center_horizontal"
-                android:id="@+id/txtOne"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/_70pxv"
-                android:layout_marginEnd="@dimen/_105pxh"
-                android:layout_marginStart="@dimen/_107pxh"
-                android:layout_marginTop="@dimen/_79pxv"
-                android:layout_width="match_parent"
-                android:singleLine="true" android:text="@string/lbl"
-                style="@style/txtInterregular50" tools:text="@string/lbl"/>
-        </LinearLayout>
-        <LinearLayout android:gravity="center_horizontal"
-            android:id="@+id/linearColumnname"
-            android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_16pxh"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_70pxv"
+                android:layout_marginBottom="@dimen/_70pxv"
+                app:srcCompat="@drawable/img_addsquare" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearColumnname"
+            style="@style/groupStylebluegray_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16pxh"
             android:layout_marginTop="@dimen/_28pxv"
-            android:layout_width="match_parent"
-            android:orientation="vertical" style="@style/groupStylebluegray_3">
-            <LinearLayout android:id="@+id/linearRowname"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearRowname"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_13pxh"
                 android:layout_marginStart="@dimen/_13pxh"
                 android:layout_marginTop="@dimen/_22pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtName"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_11pxv"
-                    android:layout_marginTop="@dimen/_1pxv"
-                    android:layout_weight="0.25"
-                    android:layout_width="0dp" android:singleLine="true"
-                    android:text="@string/lbl_name2"
-                    style="@style/txtInterregular18" tools:text="@string/lbl_name2"/>
-                <View android:background="@color/white_A700"
-                    android:id="@+id/viewRectangleFortyNine"
-                    android:layout_height="@dimen/_34pxv"
-                    android:layout_marginStart="@dimen/_88pxh" android:layout_width="@dimen/_147pxh"/>
-            </LinearLayout>
-            <LinearLayout android:id="@+id/linearRowcategory"
-                android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_13pxh"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    style="@style/txtInterregular18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_marginBottom="@dimen/_11pxv"
+                    android:layout_weight="0.25"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/lbl_name2"
+                    tools:text="@string/lbl_name2" />
+
+                <LinearLayout
+                    android:id="@+id/viewRectangleFortyeleven"
+                    android:layout_width="@dimen/_147pxh"
+                    android:layout_height="@dimen/_34pxv"
+                    android:layout_marginStart="@dimen/_88pxh"
+                    android:background="@color/white_A700"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearRowcategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_13pxh"
                 android:layout_marginTop="@dimen/_10pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtCategory"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_9pxv"
-                    android:layout_marginTop="@dimen/_2pxv"
-                    android:layout_weight="0.35"
-                    android:layout_width="0dp" android:singleLine="true"
-                    android:text="@string/lbl_category2"
-                    style="@style/txtInterregular18" tools:text="@string/lbl_category2"/>
-                <View android:background="@color/white_A700"
-                    android:id="@+id/viewRectangleFifty"
-                    android:layout_height="@dimen/_34pxv"
-                    android:layout_marginStart="@dimen/_62pxh" android:layout_width="@dimen/_147pxh"/>
-            </LinearLayout>
-            <LinearLayout android:id="@+id/linearRowcode"
-                android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_13pxh"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtCategory"
+                    style="@style/txtInterregular18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_marginBottom="@dimen/_9pxv"
+                    android:layout_weight="0.35"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/lbl_category2"
+                    tools:text="@string/lbl_category2" />
+
+                <LinearLayout
+                    android:id="@+id/viewRectangleFortyTen"
+                    android:layout_width="@dimen/_147pxh"
+                    android:layout_height="@dimen/_34pxv"
+                    android:layout_marginStart="@dimen/_88pxh"
+                    android:background="@color/white_A700">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:text="Name" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearRowcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_13pxh"
                 android:layout_marginTop="@dimen/_5pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <TextView android:ellipsize="end"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:orientation="horizontal">
+
+                <TextView
                     android:id="@+id/txtCode"
+                    style="@style/txtInterregular18"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_13pxv"
                     android:layout_weight="0.24"
-                    android:layout_width="0dp" android:singleLine="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
                     android:text="@string/lbl_code"
-                    style="@style/txtInterregular18" tools:text="@string/lbl_code"/>
-                <View android:background="@color/white_A700"
-                    android:id="@+id/viewRectangleFiftyTwo"
+                    tools:text="@string/lbl_code" />
+
+                <LinearLayout
+                    android:id="@+id/viewRectangleFortytwelve"
+                    android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
-                    android:layout_marginStart="@dimen/_91pxh"
-                    android:layout_marginTop="@dimen/_1pxv" android:layout_width="@dimen/_147pxh"/>
+                    android:layout_marginStart="@dimen/_88pxh"
+                    android:background="@color/white_A700"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name" />
+                </LinearLayout>
             </LinearLayout>
-            <LinearLayout android:id="@+id/linearRowbuyingprice"
+
+            <LinearLayout
+                android:id="@+id/linearRowbuyingprice"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_13pxh"
                 android:layout_marginStart="@dimen/_13pxh"
                 android:layout_marginTop="@dimen/_7pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtBuyingPrice"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10pxv"
-                    android:layout_marginTop="@dimen/_1pxv"
-                    android:layout_weight="0.42"
-                    android:layout_width="0dp" android:singleLine="true"
-                    android:text="@string/lbl_buying_price"
-                    style="@style/txtInterregular18" tools:text="@string/lbl_buying_price"/>
-                <View android:background="@color/white_A700"
-                    android:id="@+id/viewRectangleFiftyOne"
-                    android:layout_height="@dimen/_34pxv"
-                    android:layout_marginStart="@dimen/_31pxh" android:layout_width="@dimen/_147pxh"/>
-            </LinearLayout>
-            <LinearLayout android:id="@+id/linearRowsellingprice"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_26pxv"
                 android:layout_marginEnd="@dimen/_13pxh"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtBuyingPrice"
+                    style="@style/txtInterregular18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_weight="0.42"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/lbl_buying_price"
+                    tools:text="@string/lbl_buying_price" />
+
+                <LinearLayout
+                    android:id="@+id/viewRectangleFortythirteen"
+                    android:layout_width="@dimen/_147pxh"
+                    android:layout_height="@dimen/_34pxv"
+                    android:layout_marginStart="@dimen/_88pxh"
+                    android:background="@color/white_A700"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearRowsellingprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_13pxh"
                 android:layout_marginTop="@dimen/_6pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <FrameLayout android:id="@+id/frameStacksellingprice"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:layout_marginBottom="@dimen/_26pxv"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frameStacksellingprice"
+                    android:layout_width="@dimen/_105pxh"
                     android:layout_height="@dimen/_22pxv"
-                    android:layout_marginBottom="@dimen/_9pxv"
-                    android:layout_marginTop="@dimen/_2pxv" android:layout_width="@dimen/_105pxh">
-                    <TextView android:ellipsize="end"
-                        android:gravity="top|start"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_marginBottom="@dimen/_9pxv">
+
+                    <TextView
                         android:id="@+id/txtSellingPrice"
-                        android:layout_gravity="start"
-                        android:layout_height="wrap_content"
+                        style="@style/txtInterregular18"
                         android:layout_width="match_parent"
-                        android:singleLine="true"
-                        android:text="@string/lbl_selling_price"
-                        style="@style/txtInterregular18" tools:text="@string/lbl_selling_price"/>
-                    <TextView android:ellipsize="end"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:ellipsize="end"
                         android:gravity="top|start"
-                        android:id="@+id/txtSellingPriceOne"
-                        android:layout_gravity="start"
-                        android:layout_height="wrap_content"
-                        android:layout_width="match_parent"
                         android:singleLine="true"
                         android:text="@string/lbl_selling_price"
-                        style="@style/txtInterregular18" tools:text="@string/lbl_selling_price"/>
+                        tools:text="@string/lbl_selling_price" />
+
+                    <TextView
+                        android:id="@+id/txtSellingPriceOne"
+                        style="@style/txtInterregular18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:ellipsize="end"
+                        android:gravity="top|start"
+                        android:singleLine="true"
+                        android:text="@string/lbl_selling_price"
+                        tools:text="@string/lbl_selling_price" />
                 </FrameLayout>
-                <View android:background="@color/white_A700"
-                    android:id="@+id/viewRectangleFiftyThree"
+
+                <LinearLayout
+                    android:id="@+id/viewRectangleFortyforteen"
+                    android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
-                    android:layout_marginStart="@dimen/_39pxh" android:layout_width="@dimen/_147pxh"/>
+                    android:layout_marginStart="@dimen/_50pxh"
+                    android:background="@color/white_A700"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
         <androidx.appcompat.widget.AppCompatButton
-            android:ellipsize="end" android:gravity="center"
             android:id="@+id/btnSave"
-            android:layout_gravity="center_horizontal"
+            style="@style/btnSolidRounded"
+            android:layout_width="@dimen/_118pxh"
             android:layout_height="@dimen/_42pxv"
-            android:layout_marginBottom="@dimen/_11pxv"
-            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_16pxh"
             android:layout_marginTop="@dimen/_12pxv"
-            android:layout_width="@dimen/_118pxh"
-            android:paddingBottom="@dimen/_10pxv"
-            android:paddingEnd="@dimen/_30pxh"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginBottom="@dimen/_11pxv"
+            android:ellipsize="end"
+            android:gravity="center"
             android:paddingStart="@dimen/_30pxh"
-            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
-            android:text="@string/lbl_save" android:textAllCaps="false"
-            style="@style/btnSolidRounded" tools:text="@string/lbl_save"/>
+            android:paddingTop="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_10pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_save"
+            android:textAllCaps="false"
+            tools:text="@string/lbl_save" />
     </LinearLayout>
 </layout>

@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.marksapplication.app">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -15,40 +14,53 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp"
         android:usesCleartextTraffic="true">
-
         <activity
-            android:name=".MainActivity9"
+            android:name=".employeelist12"
             android:exported="false" />
         <activity
-            android:name=".MainActivity8"
+        android:name=".ItemSettings18"
+        android:exported="false" />
+        <activity
+            android:name=".removeemployee13"
             android:exported="false" />
         <activity
-            android:name=".MainActivity7"
+            android:name=".employeesettings10"
             android:exported="false" />
         <activity
-            android:name=".MainActivity6"
+            android:name=".edititems16"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".finalizesale6"
             android:exported="false" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".itemdetails7"
             android:exported="false" />
-
+        <activity
+            android:name=".edititem9"
+            android:exported="false" />
+        <activity
+            android:name=".additems15"
+            android:exported="false" />
+        <activity
+            android:name=".addemployee14"
+            android:exported="false" />
+        <activity
+            android:name=".employersettings11"
+            android:exported="false" />
         <activity
             android:name=".MainnavActivity"
             android:exported="false" />
-
-        <activity android:name=".SignIN1"
+        <activity
+            android:name=".SignIN1"
             android:exported="true"
             android:label="@string/title_activity_mainnav"> <!-- Set exported to true or false based on your app's requirements -->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
