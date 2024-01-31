@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="147dp"
             android:layout_marginStart="@dimen/_11pxh"
-            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_marginTop="@dimen/_50pxv"
             android:layout_marginEnd="@dimen/_11pxh"
             android:gravity="end"
             app:contentInsetStart="0dp">

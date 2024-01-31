@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ItemSettings18"
-    android:orientation="vertical">
-    <LinearLayout android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".addItemImage">
+
+    <LinearLayout
         android:id="@+id/linearAndroidSmall"
-        android:layout_height="match_parent"
+        style="@style/groupStyle"
         android:layout_width="match_parent"
-        android:orientation="vertical" style="@style/groupStyle">
-        <ImageView android:id="@+id/imageArrowLeftOne"
-            android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageArrowLeftOne"
+            android:layout_width="@dimen/_25pxh"
             android:layout_height="@dimen/_25pxh"
-            android:layout_marginEnd="@dimen/_10pxh"
+            android:layout_gravity="start"
             android:layout_marginStart="@dimen/_4pxh"
             android:layout_marginTop="@dimen/_15pxv"
-            android:layout_width="@dimen/_25pxh"
+            android:layout_marginEnd="@dimen/_10pxh"
             android:scaleType="fitXY"
             android:src="@drawable/img_arrowleft1"
-            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft1"/>
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_arrowleft1" />
 
         <LinearLayout
             android:id="@+id/viewRectangleForty"
-            android:layout_width="364dp"
-            android:layout_height="219dp"
+            android:layout_width="146dp"
+            android:layout_height="135dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_78pxh"
-            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_marginTop="@dimen/_45pxv"
             android:layout_marginEnd="@dimen/_78pxh"
             android:background="@drawable/rectangle_bg_gray_900_5e_radius_10"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="494dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:src="@drawable/download69" />
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/addpic" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnEmployees"
+            android:id="@+id/btnOpenCamera"
             style="@style/btnSolidRounded_6"
             android:layout_width="match_parent"
-            android:layout_height="49dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_78pxh"
             android:layout_marginTop="@dimen/_36pxv"
             android:layout_marginEnd="@dimen/_78pxh"
@@ -56,12 +61,12 @@
             android:paddingEnd="@dimen/_30pxh"
             android:paddingBottom="@dimen/_9pxv"
             android:singleLine="true"
-            android:text="Add Item"
+            android:text="From Gallery"
             android:textAllCaps="false"
-            tools:text="Add Items" />
+            tools:text="Camera" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnAddEmployees"
+            android:id="@+id/btnOpenGallery"
             style="@style/btnSolidRounded_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,9 +80,30 @@
             android:paddingEnd="@dimen/_17pxh"
             android:paddingBottom="@dimen/_9pxv"
             android:singleLine="true"
-            android:text="@string/lbl_add_employees"
+            android:text="Gallery"
             android:textAllCaps="false"
-            tools:text="Export Items" />
+            tools:text="Gallery" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignOut"
+            style="@style/btnSolidRounded_5"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:layout_marginStart="@dimen/_78pxh"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_marginEnd="@dimen/_78pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_14pxv"
+            android:singleLine="true"
+            android:text="Save"
+            android:textAllCaps="false"
+            tools:text="save" />
+
     </LinearLayout>
 
 
