@@ -80,7 +80,7 @@
                     android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
                     android:layout_marginStart="@dimen/_88pxh"
-                    android:background="@color/white_A700"
+                    android:background="@color/gray_900_2b"
                     android:orientation="vertical">
 
                     <EditText
@@ -106,11 +106,10 @@
                 <TextView
                     android:id="@+id/txtCategory"
                     style="@style/txtInterregular18"
-                    android:layout_width="0dp"
+                    android:layout_width="109dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_2pxv"
                     android:layout_marginBottom="@dimen/_9pxv"
-                    android:layout_weight="0.35"
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:text="@string/lbl_category2"
@@ -120,8 +119,8 @@
                     android:id="@+id/viewRectangleFortyTen"
                     android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
-                    android:layout_marginStart="@dimen/_88pxh"
-                    android:background="@color/white_A700">
+                    android:layout_marginStart="@dimen/_59pxh"
+                    android:background="@color/gray_900_2b">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -180,7 +179,7 @@
                     android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
                     android:layout_marginStart="@dimen/_88pxh"
-                    android:background="@color/white_A700">
+                    android:background="@color/gray_900_2b">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -228,11 +227,10 @@
                 <TextView
                     android:id="@+id/txtBuyingPrice"
                     style="@style/txtInterregular18"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="138dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/_1pxv"
                     android:layout_marginBottom="@dimen/_10pxv"
-                    android:layout_weight="0.42"
                     android:ellipsize="end"
                     android:singleLine="true"
                     android:text="@string/lbl_buying_price"
@@ -242,8 +240,8 @@
                     android:id="@+id/viewRectangleFortythirteen"
                     android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
-                    android:layout_marginStart="@dimen/_88pxh"
-                    android:background="@color/white_A700"
+                    android:layout_marginStart="@dimen/_33pxh"
+                    android:background="@color/gray_900_2b"
                     android:orientation="vertical">
 
                     <EditText
@@ -285,17 +283,6 @@
                         android:text="@string/lbl_selling_price"
                         tools:text="@string/lbl_selling_price" />
 
-                    <TextView
-                        android:id="@+id/txtSellingPriceOne"
-                        style="@style/txtInterregular18"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:ellipsize="end"
-                        android:gravity="top|start"
-                        android:singleLine="true"
-                        android:text="@string/lbl_selling_price"
-                        tools:text="@string/lbl_selling_price" />
                 </FrameLayout>
 
                 <LinearLayout
@@ -303,7 +290,7 @@
                     android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
                     android:layout_marginStart="@dimen/_50pxh"
-                    android:background="@color/white_A700"
+                    android:background="@color/gray_900_2b"
                     android:orientation="vertical">
 
                     <EditText
@@ -343,7 +330,7 @@
                     android:layout_width="@dimen/_147pxh"
                     android:layout_height="@dimen/_34pxv"
                     android:layout_marginStart="@dimen/_75pxh"
-                    android:background="@color/white_A700"
+                    android:background="@color/gray_900_2b"
                     android:orientation="vertical">
 
                     <EditText

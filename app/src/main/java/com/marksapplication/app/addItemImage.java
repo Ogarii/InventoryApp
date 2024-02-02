@@ -34,11 +34,13 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Random;
 
 public class addItemImage extends AppCompatActivity {
 
@@ -90,18 +92,50 @@ public class addItemImage extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (imageView3.getDrawable() == null) {
+                    // No image selected
+                    return;
+                }
 
-                Storage();
+                // Save the image to a file in storage
+                Uri imageUri = saveImageToFile();
+
+                // Pass the Uri to the next activity using an intent
                 Intent intent = new Intent(addItemImage.this, additems15.class);
-                ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-                byte[] data = baos.toByteArray();
-
+                assert imageUri != null;
+                intent.putExtra("imageUri", imageUri.toString());
                 intent.putExtra("fromSenderActivity", true);
-                intent.putExtra("image", data);
+                Log.d("ImageUri", "Image Uri: " + imageUri);
                 startActivity(intent);
+                finish();
             }
         });
+
+    }
+    private Uri saveImageToFile() {
+        // Get the bitmap from the ImageView
+        imageView3.setDrawingCacheEnabled(true);
+        imageView3.buildDrawingCache();
+        bitmap = ((BitmapDrawable) imageView3.getDrawable()).getBitmap();
+
+        // Create a unique filename using timestamp
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+        String imageFileName = "JPEG_" + timeStamp + ".jpg";
+
+        // Save the bitmap to a file in the device's external storage directory
+        File imagePath = new File(Environment.getExternalStorageDirectory(), imageFileName);
+        try {
+            FileOutputStream fos = new FileOutputStream(imagePath);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fos);
+            fos.flush();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        // Return the Uri of the saved image file
+        return Uri.fromFile(imagePath);
     }
 
     public void onClickCaptureImage(View view) {
@@ -135,7 +169,7 @@ public class addItemImage extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
-            case REQUEST_CAMERA_PERMISSION :
+            case REQUEST_CAMERA_PERMISSION:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // Camera permission granted
                     // You can proceed with camera operations here
@@ -167,6 +201,10 @@ public class addItemImage extends AppCompatActivity {
     private File createImageFile() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
+
+        // Append a random number to the file name to ensure uniqueness
+        imageFileName += new Random().nextInt(1000);
+
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         try {
             return File.createTempFile(imageFileName, ".jpg", storageDir);
@@ -175,6 +213,7 @@ public class addItemImage extends AppCompatActivity {
         }
         return null;
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -193,42 +232,6 @@ public class addItemImage extends AppCompatActivity {
                 }
             }
         }
-    }
-
-    public void Storage() {
-        if (imageView3.getDrawable() == null) {
-            // No image selected
-            return;
-        }
-
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReference();
-
-        StorageReference mountainsRef = storageRef.child("images/mountains.jpg");
-
-        imageView3.setDrawingCacheEnabled(true);
-        imageView3.buildDrawingCache();
-        bitmap = ((BitmapDrawable) imageView3.getDrawable()).getBitmap();
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
-        byte[] data = baos.toByteArray();
-
-
-
-        UploadTask uploadTask = mountainsRef.putBytes(data);
-        uploadTask.addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception exception) {
-                Log.e("TAG", "Failed to save image: " + exception.getMessage());
-                // Handle unsuccessful uploads
-            }
-        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-            @Override
-            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                Log.d("TAG", "Image upload successful"+ Objects.requireNonNull(taskSnapshot.getMetadata()).getPath());
-                // Handle successful uploads
-            }
-        });
     }
 
 }
