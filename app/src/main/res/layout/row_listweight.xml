@@ -4,7 +4,7 @@
     <FrameLayout android:id="@+id/frameStackweight"
         android:layout_height="wrap_content" android:layout_width="match_parent">
         <TextView android:ellipsize="end" android:gravity="top|start"
-            android:id="@+id/txtWeight" android:layout_gravity="start"
+            android:id="@+id/prodName" android:layout_gravity="start"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:singleLine="true"

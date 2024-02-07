@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data/>
-    <LinearLayout android:id="@+id/linearAndroidSmall"
+    <LinearLayout android:id="@+id/prodCategory"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStyle">
@@ -132,7 +132,7 @@
                     android:layout_weight="0.49"
                     android:layout_width="0dp" android:orientation="vertical">
                     <TextView android:ellipsize="end"
-                        android:id="@+id/txtWeight"
+                        android:id="@+id/prodName"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_3pxh"
                         android:layout_width="match_parent"
@@ -140,7 +140,7 @@
                         android:text="@string/lbl_omo_500g"
                         style="@style/txtInterregular15" tools:text="@string/lbl_omo_500g"/>
                     <TextView android:ellipsize="end"
-                        android:id="@+id/txtLanguage"
+                        android:id="@+id/prodQunatity"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_10pxh"
                         android:layout_marginTop="@dimen/_3pxv"
@@ -149,7 +149,7 @@
                         android:text="@string/lbl_qnt_2"
                         style="@style/txtInterregular15" tools:text="@string/lbl_qnt_2"/>
                     <TextView android:ellipsize="end"
-                        android:id="@+id/txtLanguageOne"
+                        android:id="@+id/prodPrice"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_4pxh"
                         android:layout_marginTop="@dimen/_1pxv"
@@ -158,7 +158,7 @@
                         android:text="@string/lbl_price_500"
                         style="@style/txtInterregular15" tools:text="@string/lbl_price_500"/>
                     <TextView android:ellipsize="end"
-                        android:id="@+id/txtLanguageTwo"
+                        android:id="@+id/prodCategoryy"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_1pxv"
                         android:layout_width="match_parent"

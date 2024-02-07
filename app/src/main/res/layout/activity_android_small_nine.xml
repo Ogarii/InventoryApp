@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <data/>
-    <LinearLayout android:id="@+id/linearAndroidSmall"
+    <LinearLayout android:id="@+id/prodCategory"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStyle">
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:orientation="vertical" style="@style/groupStylebluegray_2">
             <TextView android:ellipsize="end"
-                android:id="@+id/txtLanguage"
+                android:id="@+id/prodQunatity"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_49pxh"
@@ -43,7 +43,7 @@
                 android:text="@string/lbl_item_name"
                 style="@style/txtInterregular15_2" tools:text="@string/lbl_item_name"/>
             <TextView android:ellipsize="end"
-                android:id="@+id/txtLanguageOne"
+                android:id="@+id/prodPrice"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_49pxh"
@@ -54,7 +54,7 @@
                 android:text="@string/msg_buying_price"
                 style="@style/txtInterregular15_2" tools:text="@string/msg_buying_price"/>
             <TextView android:ellipsize="end"
-                android:id="@+id/txtLanguageTwo"
+                android:id="@+id/prodCategoryy"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_49pxh"

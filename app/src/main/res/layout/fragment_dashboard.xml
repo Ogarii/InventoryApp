@@ -37,7 +37,7 @@
             android:gravity="start">
 
             <LinearLayout
-                android:id="@+id/linearAndroidSmall"
+                android:id="@+id/prodCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -71,7 +71,7 @@
                             android:layout_marginEnd="@dimen/_10pxh">
 
                             <TextView
-                                android:id="@+id/txtWeight"
+                                android:id="@+id/prodName"
                                 style="@style/txtInterregular15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                             android:layout_marginEnd="@dimen/_10pxh">
 
                             <TextView
-                                android:id="@+id/txtLanguage"
+                                android:id="@+id/prodQunatity"
                                 style="@style/txtInterregular15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -116,7 +116,7 @@
                                 tools:text="@string/lbl_qnt_2" />
 
                             <TextView
-                                android:id="@+id/txtLanguageOne"
+                                android:id="@+id/prodPrice"
                                 style="@style/txtInterregular15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -137,7 +137,7 @@
                             android:layout_marginEnd="@dimen/_10pxh">
 
                             <TextView
-                                android:id="@+id/txtLanguageTwo"
+                                android:id="@+id/prodCategoryy"
                                 style="@style/txtInterregular15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

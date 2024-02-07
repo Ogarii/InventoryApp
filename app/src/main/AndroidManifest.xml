@@ -29,9 +29,6 @@
             android:theme="@style/AppTheme.customTheme" />
 
         <activity
-            android:name=".scannerActivity"
-            android:exported="false" />
-        <activity
             android:name=".employeelist12"
             android:exported="false"
             android:theme="@style/AppTheme.customTheme" />

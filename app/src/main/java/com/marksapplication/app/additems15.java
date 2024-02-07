@@ -3,15 +3,12 @@ package com.marksapplication.app;
 import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,16 +23,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -132,9 +128,8 @@ public class additems15 extends AppCompatActivity {
             Toast.makeText(this, "No image received", Toast.LENGTH_SHORT).show();
         }
     }
-    public void store(){
-
-         db = FirebaseFirestore.getInstance();
+    public void store() {
+        db = FirebaseFirestore.getInstance();
 
         editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
         editTextTextPersonName2 = findViewById(R.id.editTextTextPersonName2);
@@ -150,6 +145,29 @@ public class additems15 extends AppCompatActivity {
         String ProductSellingPrice = editTextTextPersonName5.getText().toString().trim();
         String ProductQuantity = editTextTextPersonName6.getText().toString().trim();
 
+
+        ifProdExists(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    boolean productExists = false;
+                    for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
+                        if (document.getId().equals(ProductCode)) {
+                            Toast.makeText(additems15.this, "Product Already Exists", Toast.LENGTH_SHORT).show();
+                            showAlert();
+                            productExists = true;
+                            break;
+                        }
+                    }
+                    if (!productExists) {
+                        addProductToDatabase(ProductName, ProductCategory, ProductCode, ProductBuyingPrice, ProductSellingPrice, ProductQuantity,imageUri);
+                    }
+                }
+            }
+        });
+    }
+
+    private void addProductToDatabase(String ProductName, String ProductCategory, String ProductCode, String ProductBuyingPrice, String ProductSellingPrice, String ProductQuantity, String imageUri) {
         Map<String, Object> Product = new HashMap<>();
         Product.put("ProductName", ProductName);
         Product.put("ProductCategory", ProductCategory);
@@ -157,8 +175,10 @@ public class additems15 extends AppCompatActivity {
         Product.put("ProductBuyingPrice", ProductBuyingPrice);
         Product.put("ProductSellingPrice", ProductSellingPrice);
         Product.put("ProductQuantity", ProductQuantity);
-        Product.put("ProductImage", imageUri.toString());
-
+        Product.put("imageUri", imageUri);
+        // Add imageUri here if it's available
+        Timestamp timestamp = Timestamp.now();
+        Product.put("DateTime", timestamp);
 
         db.collection("Product").document(ProductCode).set(Product)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -166,7 +186,6 @@ public class additems15 extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         Toast.makeText(additems15.this, "Product Added Successfully", Toast.LENGTH_SHORT).show();
                         Log.d(TAG, "DocumentSnapshot successfully written!"+ ProductCode);
-
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -175,8 +194,41 @@ public class additems15 extends AppCompatActivity {
                         Log.w(TAG, "Error writing document", e);
                     }
                 });
-
     }
+
+    private void ifProdExists(OnCompleteListener<QuerySnapshot> onCompleteListener) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Products").get().addOnCompleteListener(onCompleteListener);
+    }
+    private void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Alert")
+                .setMessage("Product Already Exists")
+                .setPositiveButton("Edit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Perform the action (e.g., navigate to item page)
+                        navigateToItemPage();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Dismiss the dialog
+                        dialog.dismiss();
+                        // Optionally handle cancel action
+                    }
+                })
+                .show();
+    }
+
+    private void navigateToItemPage() {
+        Intent intent = new Intent(additems15.this, edititem9.class);
+        // Add any extra data to the intent if needed
+        startActivity(intent);
+    }
+
+
     public void Storage() {
         if (imageUri != null) {
             FirebaseStorage storage = FirebaseStorage.getInstance();
@@ -197,21 +249,6 @@ public class additems15 extends AppCompatActivity {
         }
     }
 
-    public void ifProdExists(){
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("Products").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if(task.isSuccessful()){
-                    for(QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())){
-                        if(Objects.equals(document.getString("ProductCode"), ProductCode)){
-                            Toast.makeText(additems15.this, "Product Already Exists", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                }
-            }
-        });
-    }
     //Geg item code
     private void startBarcodeScanner() {
         IntentIntegrator integrator = new IntentIntegrator(this);

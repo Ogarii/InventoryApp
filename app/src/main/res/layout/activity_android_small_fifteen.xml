@@ -5,7 +5,7 @@
     <data/>
 
     <LinearLayout
-        android:id="@+id/linearAndroidSmall"
+        android:id="@+id/prodCategory"
         style="@style/groupStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
