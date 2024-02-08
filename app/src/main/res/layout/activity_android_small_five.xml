@@ -101,7 +101,7 @@
                             android:layout_marginEnd="@dimen/_10pxh">
 
                             <TextView
-                                android:id="@+id/prodQunatity"
+                                android:id="@+id/prodname"
                                 style="@style/txtInterregular15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                                 tools:text="@string/lbl_price_500" />
 
                             <TextView
-                                android:id="@+id/txtLanguageThree"
+                                android:id="@+id/prodquantityy"
                                 style="@style/txtInterregular15"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

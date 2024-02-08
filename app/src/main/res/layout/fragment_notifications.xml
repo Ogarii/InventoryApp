@@ -65,7 +65,7 @@
                         tools:text="@string/lbl_omo_500g" />
 
                     <TextView
-                        android:id="@+id/prodQunatity"
+                        android:id="@+id/prodname"
                         style="@style/txtInterregular15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

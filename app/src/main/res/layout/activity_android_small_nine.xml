@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:orientation="vertical" style="@style/groupStylebluegray_2">
             <TextView android:ellipsize="end"
-                android:id="@+id/prodQunatity"
+                android:id="@+id/prodname"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_49pxh"
@@ -65,7 +65,7 @@
                 android:text="@string/msg_selling_price"
                 style="@style/txtInterregular15_2" tools:text="@string/msg_selling_price"/>
             <TextView android:ellipsize="end"
-                android:id="@+id/txtLanguageThree"
+                android:id="@+id/prodquantityy"
                 android:layout_gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_49pxh"

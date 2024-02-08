@@ -95,7 +95,7 @@
                         tools:text="@string/lbl_omo_500g" />
 
                     <TextView
-                        android:id="@+id/txtLanguageThree"
+                        android:id="@+id/prodquantityy"
                         style="@style/txtInterregular15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
