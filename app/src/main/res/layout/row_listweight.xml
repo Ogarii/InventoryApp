@@ -27,7 +27,7 @@
                 android:layout_height="@dimen/_19pxv" android:layout_width="@dimen/_72pxh">
                 <TextView android:ellipsize="end"
                     android:gravity="top|start"
-                    android:id="@+id/txtWeightTwo"
+                    android:id="@+id/txtProd"
                     android:layout_gravity="start"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"

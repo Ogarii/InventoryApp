@@ -152,7 +152,7 @@
                     android:layout_marginEnd="@dimen/_10pxh">
 
                     <TextView
-                        android:id="@+id/txtWeightTwo"
+                        android:id="@+id/txtProd"
                         style="@style/txtInterregular15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -185,7 +185,7 @@
                     android:layout_marginEnd="@dimen/_10pxh">
 
                     <TextView
-                        android:id="@+id/txtLanguageSix"
+                        android:id="@+id/txtqnty"
                         style="@style/txtInterregular15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
                         tools:text="@string/lbl_qnt_2" />
 
                     <TextView
-                        android:id="@+id/txtLanguageSeven"
+                        android:id="@+id/txtPrice"
                         style="@style/txtInterregular15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
                     android:layout_marginEnd="@dimen/_10pxh">
 
                     <TextView
-                        android:id="@+id/txtLanguageEight"
+                        android:id="@+id/Total"
                         style="@style/txtInterregular15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

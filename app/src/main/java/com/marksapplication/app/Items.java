@@ -4,6 +4,9 @@ import com.google.firebase.Timestamp;
 
 public class Items {
 
+    private String quantity = "1";
+
+    private String id;
     private Timestamp DateTime;
     private String ProductName;
     private String ProductQuantity;
@@ -17,7 +20,9 @@ public class Items {
     public Items() {
     }
 
-    public Items(Timestamp dateTime, String productName, String productQuantity, String productBuyingPrice, String productCode, String productCategory, String productImage, String productSellingPrice, String imageUri) {
+    public Items(String Quantity,String Id,Timestamp dateTime, String productName, String productQuantity, String productBuyingPrice, String productCode, String productCategory, String productImage, String productSellingPrice, String imageUri) {
+        quantity = Quantity;
+        id = Id;
         DateTime = dateTime;
         ProductName = productName;
         ProductQuantity = productQuantity;
@@ -27,6 +32,18 @@ public class Items {
         ProductImage = productImage;
         ProductSellingPrice = productSellingPrice;
         this.imageUri = imageUri;
+    }
+    public String getQuantity() {
+        return quantity;
+    }
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
     }
 
     public Timestamp getDateTime() {
