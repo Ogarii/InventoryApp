@@ -48,6 +48,7 @@
         public makesale5() {
 
         }
+
         private RecyclerView recyclerView;
         private makesale5.ItemAdapter itemAdapter;
         private List<Items> itemsList;
@@ -55,13 +56,15 @@
         private static final int CAMERA_PERMISSION_REQUEST_CODE = 200;
 
         private ZXingScannerView scannerView;
-        static String newQuantity;
 
         LinearLayout viewRectangleEight;
         String barcodeData;
 
         Map<String, String> productCodeToIdMap = new HashMap<>();
 
+        static TextView textView3;
+
+        static ImageView imageView9;
 
 
         @Override
@@ -83,6 +86,9 @@
             recyclerView.setAdapter(itemAdapter);
 
             viewRectangleEight = view.findViewById(R.id.viewRectangleEight);
+            textView3 = view.findViewById(R.id.textView3);
+            imageView9 = view.findViewById(R.id.imageView9);
+
 
             // Start the barcode scanner if camera permission is granted
             if (ContextCompat.checkSelfPermission(view.getContext(), android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -161,6 +167,8 @@
                                         // Add the scanned item only if it's not a duplicate
                                         itemsList.add(item);
                                         itemAdapter.notifyDataSetChanged();
+
+
                                     } else {
                                         // Handle the case where the item is a duplicate
                                         Log.d(TAG, "Duplicate item scanned.");
@@ -190,8 +198,11 @@
                             Log.e(TAG, "Error fetching items: " + e.getMessage());
                         }
                     });
+
             onResume();
+
         }
+
         // compare with scanned code
         private void handleMatchingCode() {
 
@@ -199,8 +210,6 @@
             // Resume scanning after handling the result
             scannerView.resumeCameraPreview(this);
         }
-
-
 
 
         @Override
@@ -214,6 +223,7 @@
                 }
             }
         }
+
         @Override
         public void onPause() {
             super.onPause();
@@ -245,29 +255,6 @@
         }
 
 
-        private void getItems() {
-            FirebaseFirestore db = FirebaseFirestore.getInstance();
-            db.collection("Product").get()
-                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                        @Override
-                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                            for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                                Items items = documentSnapshot.toObject(Items.class);
-                                itemsList.add(items);
-
-
-                            }
-                            itemAdapter.notifyDataSetChanged();
-                            Log.d(TAG, "items retrieved successfully");
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.e(TAG, "Error fetching items: " + e.getMessage());
-                        }
-                    });
-
-        }
         private static class ItemAdapter extends RecyclerView.Adapter<makesale5.ItemAdapter.ItemViewHolder> {
             private List<Items> itemsList;
             private static makesale5 context;
@@ -275,6 +262,15 @@
             public ItemAdapter(makesale5 context, List<Items> itemsList) {
                 this.context = context;
                 this.itemsList = itemsList;
+            }
+            private void updateTotal() {
+                int total = 0;
+                for (Items item : itemsList) {
+                    int price = Integer.parseInt(item.getProductSellingPrice());
+                    int quantity = Integer.parseInt(item.getQuantity());
+                    total += price * quantity;
+                }
+                makesale5.textView3.setText(String.valueOf("TOTAL:" +total));
             }
 
             @NonNull
@@ -288,8 +284,11 @@
             public void onBindViewHolder(@NonNull makesale5.ItemAdapter.ItemViewHolder holder, int position) {
                 Items items = itemsList.get(position);
                 holder.bind(items);
+                updateTotal();
+
 
             }
+
             @Override
             public int getItemCount() {
                 return itemsList.size();
@@ -297,7 +296,7 @@
 
             static class ItemViewHolder extends RecyclerView.ViewHolder {
 
-                TextView txtProd,txtqnty,txtPrice,txtCode,Total;
+                TextView txtProd, txtqnty, txtPrice, txtCode, Total;
 
 
                 ItemViewHolder(@NonNull View itemView) {
@@ -319,6 +318,14 @@
                     txtCode.setText(items.getProductCode());
                     txtqnty.setText(items.getQuantity());
 
+                    if (items.getImageUri() != null) {
+                        imageView9.setImageURI(Uri.parse(items.getImageUri()));
+                    } else {
+                        Toast.makeText(context.getContext(), "No image found", Toast.LENGTH_SHORT).show();
+                        // Set a placeholder image or handle the absence of an image URI accordingly
+                    }
+
+
                     String price = txtPrice.getText().toString();
                     String quantity = txtqnty.getText().toString();
 
@@ -329,6 +336,5 @@
                 }
             }
         }
-
 
     }

@@ -182,6 +182,7 @@
                             intent.putExtra("productSellingPrice",items.getProductSellingPrice());
                             intent.putExtra("productCategory",items.getProductCategory());
                             intent.putExtra("productImage",items.getImageUri());
+
                             if (items.getDateTime() != null) {
                                 intent.putExtra("purchaseDate", items.getDateTime().toString());
                                 Log.d(TAG, "DateTime: " + items.getDateTime().toString());

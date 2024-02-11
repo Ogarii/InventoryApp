@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -100,17 +101,22 @@ public class addItemImage extends AppCompatActivity {
                 // Save the image to a file in storage
                 Uri imageUri = saveImageToFile();
 
-                // Pass the Uri to the next activity using an intent
-                Intent intent = new Intent(addItemImage.this, additems15.class);
-                assert imageUri != null;
-                intent.putExtra("imageUri", imageUri.toString());
-                intent.putExtra("fromSenderActivity", true);
-                Log.d("ImageUri", "Image Uri: " + imageUri);
-                startActivity(intent);
-                finish();
+                if (imageUri != null) {
+                    // Pass the Uri to the next activity using an intent
+                    Intent intent = new Intent(addItemImage.this, additems15.class);
+                    intent.putExtra("imageUri", imageUri.toString());
+                    intent.putExtra("fromSenderActivity", true);
+
+                    Log.d("ImageUri", "Image Uri: " + imageUri);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    // Handle the case where saving image fails
+                    // For example, show an error message to the user
+                    Toast.makeText(addItemImage.this, "Failed to save image", Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
     }
     private Uri saveImageToFile() {
         // Get the bitmap from the ImageView
@@ -233,5 +239,6 @@ public class addItemImage extends AppCompatActivity {
             }
         }
     }
+
 
 }
